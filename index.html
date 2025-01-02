@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Essay Generator</title>
+    <link rel="stylesheet" href="src/styles.css"/>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    </head>
 </head>
 <body>
-    <h1>
-        AI Essay Generator
-    </h1>
+    <div class="container">
+        <header>
+            <h1>Essay Generator</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="story-generator-form">
+                    <input type="text" placeholder="Enter the topic of the story" autofocus required autocomplete="off"
+                        class="instructions" id="user-instructions" />
+                    <input type="submit" class="submit-button" />
+                </form>
+                <div class="hint">e.g. My Holiday, The Storm, The wedding</div>
+            </div>
+    
+            <div class="story  hidden " id="story"></div>
+        </main>
+
 
     <footer>
         This AI project was coded with💜 by
@@ -17,6 +35,8 @@
         and is
         <a href="https://ai-essay-generator.netlify.app/" target="_blank"> hosted on Netlify</a>
     </footer>
+    </div>
+    <script src="src/app.js"></script>
     
 </body>
 </html>
